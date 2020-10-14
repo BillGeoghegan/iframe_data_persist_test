@@ -1,7 +1,7 @@
 const setValue = () => {
-  const value = new Date();
-  localStorage.setItem("VALUE", value);
-  console.log("setting value: ", value);
+  window.onmessage = function (event) {
+    event.source.postMessage("This is a lovely message", event.origin);
+  };
 };
 
 const getValue = () => {
