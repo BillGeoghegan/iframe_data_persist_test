@@ -5,4 +5,10 @@ window.onmessage = function (event) {
 
 // Trigger:
 // <iframe id="myframe" src="framed.htm"></iframe>
-document.getElementById("myframe").contentWindow.postMessage("", "*");
+
+setInterval(() => {
+  const test = document
+    .getElementById("myframe")
+    .contentWindow.postMessage("", "*");
+  console.log(test);
+}, 3000);
